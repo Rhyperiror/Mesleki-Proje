@@ -12,7 +12,7 @@ namespace CinemaHub.Controllers
     public class HomeController : Controller
     {
         /*
-         Merhaba Emes
+         Merhaba Enes
          */
         private readonly ILogger<HomeController> _logger;
 
