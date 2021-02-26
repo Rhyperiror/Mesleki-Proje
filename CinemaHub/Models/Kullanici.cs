@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CinemaHub.Models
 {
@@ -9,5 +12,8 @@ namespace CinemaHub.Models
         public string KullaniciAdi { get; set; }
         public string Eposta { get; set; }
         public string Sifre { get; set; }
+        public int Rol { get; set; }
+        [NotMapped]
+        public List<SelectListItem> Roller { get; set; }
     }
 }

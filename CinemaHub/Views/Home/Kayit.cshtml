@@ -1,0 +1,28 @@
+﻿@model CinemaHub.Models.Kullanici
+
+@{ 
+    ViewData["Title"] = "Kayıt";
+}
+
+<form asp-controller="Home" asp-action="Kayit">
+    @*form submit edildiğinde HomeController içerisinde Kayit metoduna gönderilecek*@
+    <div class="mb-3">
+        <label for="KullaniciAdi" class="form-label">Kullanıcı Adı</label>
+        <input type="text" class="form-control" id="Kullanici_Adi" name="KullaniciAdi">
+    </div>
+    <div class="mb-3">
+        <label for="sifre" class="form-label">Şifre</label>
+        <input type="password" class="form-control" id="sifre" name="Sifre">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Eposta</label>
+        <input type="email" class="form-control" id="email" name="Eposta">
+    </div>
+    <div class="mb-3 dropdown">
+        <label for="rol" class="form-label">Rol</label>
+        <select asp-for="@Model.Rol" asp-items="@Model.Roller">
+            <option>Rol Seçiniz</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Giriş</button>
+</form>
