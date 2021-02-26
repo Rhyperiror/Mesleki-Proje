@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CinemaHub.DB;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +27,8 @@ namespace CinemaHub
         {
             services.AddControllersWithViews();
             //entity framework baðlantýsý için gereken þeleþmelerin buunduðu sýnýf
-            services.AddDbContext
+            services.AddDbContext<Db_Context>(option => option.UseSqlServer(
+                Configuration.GetConnectionString("DefaultCon")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

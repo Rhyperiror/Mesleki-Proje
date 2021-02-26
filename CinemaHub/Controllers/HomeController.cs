@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using CinemaHub.DB;
 using CinemaHub.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -12,10 +13,12 @@ namespace CinemaHub.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly Db_Context _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, Db_Context context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Login()
@@ -26,9 +29,21 @@ namespace CinemaHub.Controllers
         [HttpPost]
         public IActionResult Login(Kullanici giris)
         {
+            /*
+             SELECT * FROM KULLANICILAR;
+             
+            List<Kullanici> viewList = _context.KULLANICILAR.ToList();*/
+            
+            var girişBilgileri = _context.KULLANICILAR.FirstOrDefault(
+                db => db.KullaniciAdi == giris.KullaniciAdi &&
+                db.Sifre == giris.Sifre);
 
-            ViewBag.sifre = giris.Sifre;
-            return View("Privacy", giris);
+            if (girişBilgileri != null)
+            {
+                //sisteme giriş yapacak
+            }
+
+            return View("Privacy");
         }
 
         public IActionResult Logout()

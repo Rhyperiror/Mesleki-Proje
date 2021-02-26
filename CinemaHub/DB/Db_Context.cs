@@ -1,11 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CinemaHub.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CinemaHub.DB
 {
-    public class Db_Context
+    public class Db_Context : DbContext
     {
+        public Db_Context(DbContextOptions<Db_Context> options) : base(options)
+        {
+
+        }
+
+        public DbSet<Kullanici> KULLANICILAR { get; set; }
+        public DbSet<Roller> ROLLER { get; set; }
     }
 }
