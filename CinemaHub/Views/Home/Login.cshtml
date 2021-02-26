@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Giriş";
+}
+
+
+
+<form asp-controller="Home" asp-action="Login"> @*form submit edildiğinde HomeController içerisinde Login metoduna gönderilecek*@
+    <div class="mb-3">
+        <label for="KullaniciAdi" class="form-label">Kullanıcı Adı</label>
+        <input type="text" class="form-control" id="Kullanici_Adi" name="KullaniciAdi">
+    </div>
+    <div class="mb-3">
+        <label for="sifre" class="form-label">Şifre</label>
+        <input type="password" class="form-control" id="sifre" name="Sifre">
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="deneme()">Giriş</button>
+</form>

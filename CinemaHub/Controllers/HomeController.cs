@@ -11,12 +11,6 @@ namespace CinemaHub.Controllers
 {
     public class HomeController : Controller
     {
-        /*
-         Merhaba Can
-         */ 
-        /*
-         Merhaba Enes
-         */
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -24,12 +18,20 @@ namespace CinemaHub.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Login()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Login(Kullanici giris)
+        {
+
+            ViewBag.sifre = giris.Sifre;
+            return View("Privacy", giris);
+        }
+
+        public IActionResult Logout()
         {
             return View();
         }
