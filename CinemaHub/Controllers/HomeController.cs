@@ -14,6 +14,9 @@ namespace CinemaHub.Controllers
         /*
          Merhaba Can
          */ 
+        /*
+         Merhaba Enes
+         */
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
