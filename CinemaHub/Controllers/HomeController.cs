@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace CinemaHub.Controllers
 {
-    //Merhaba Volkeyn
+    //Merhaba Enes
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
