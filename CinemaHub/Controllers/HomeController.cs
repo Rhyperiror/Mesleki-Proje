@@ -64,10 +64,6 @@ namespace CinemaHub.Controllers
             değerler model sınıfını view e yönlendiriyoruz ki sayfa yüklendiğinde 
             roller drop down list i dolu gelsin.
              */
-            yeniKisiHazirlik.Roller = _context.ROLLER.Select(item => new SelectListItem(){
-                Value = item.ROLID.ToString(), //kullanıcının seçtiği rolün id sini kaydetmek için
-                Text = item.ROL //kullanıcı rollerin metinsel karşılıklarını görmesi için
-            }).ToList();
 
             return View(yeniKisiHazirlik);
         }
