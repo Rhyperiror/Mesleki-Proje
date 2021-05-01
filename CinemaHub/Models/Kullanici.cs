@@ -12,8 +12,6 @@ namespace CinemaHub.Models
         public string KullaniciAdi { get; set; }
         public string Eposta { get; set; }
         public string Sifre { get; set; }
-        public int Rol { get; set; }
-        [NotMapped]
-        public List<SelectListItem> Roller { get; set; }
+        
     }
 }

@@ -11,6 +11,5 @@ namespace CinemaHub.DB
         }
 
         public DbSet<Kullanici> KULLANICILAR { get; set; }
-        public DbSet<Roller> ROLLER { get; set; }
     }
 }
