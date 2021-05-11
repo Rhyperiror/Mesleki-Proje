@@ -11,5 +11,11 @@ namespace CinemaHub.DB
         }
 
         public DbSet<Kullanici> KULLANICILAR { get; set; }
+        public DbSet<FilmBilgi> FILMBILGILERI { get; set; }
+        public DbSet<Salon> SALONLAR { get; set; }
+        public DbSet<Seans> SEANSLAR { get; set; }
+        public DbSet<Bilet> BILETLER { get; set; }
+        public DbSet<Satis> SATISLAR { get; set; }
+        public DbSet<BiletSatis> BILETSATISLARI { get; set; }
     }
 }
