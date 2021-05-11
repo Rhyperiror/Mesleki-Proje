@@ -9,9 +9,11 @@ namespace CinemaHub.Models
     {
         [Key]
         public int ID { get; set; }
-        public string KullaniciAdi { get; set; }
-        public string Eposta { get; set; }
-        public string Sifre { get; set; }
-        
+        public string KULLANICIADI { get; set; }
+        public string KULLANICISOYADI { get; set; }
+        public string EPOSTA { get; set; }
+        public string SIFRE { get; set; }
+        public int KAYITTARIH { get; set; }
+
     }
 }
