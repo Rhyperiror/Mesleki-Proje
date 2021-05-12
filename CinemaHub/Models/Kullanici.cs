@@ -14,6 +14,7 @@ namespace CinemaHub.Models
         public string KULLANICISOYADI { get; set; }
         public string EPOSTA { get; set; }
         public string SIFRE { get; set; }
+        public int ROL { get; set; }
         public DateTime KAYITTARIH { get; set; }
 
     }
