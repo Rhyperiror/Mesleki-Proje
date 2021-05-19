@@ -37,8 +37,8 @@ namespace CinemaHub.Controllers
             List<Kullanici> viewList = _context.KULLANICILAR.ToList();*/
 
             var girişBilgileri = _context.KULLANICILAR.FirstOrDefault(
-                db => db.KullaniciAdi == giris.KullaniciAdi &&
-                db.Sifre == giris.Sifre);
+                db => db.KULLANICIADI == giris.KULLANICIADI &&
+                db.SIFRE == giris.SIFRE);
 
             if (girişBilgileri != null)
             {
