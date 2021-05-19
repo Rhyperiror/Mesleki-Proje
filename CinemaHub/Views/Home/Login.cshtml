@@ -4,14 +4,29 @@
 
 
 
-<form asp-controller="Home" asp-action="Login"> @*form submit edildiğinde HomeController içerisinde Login metoduna gönderilecek*@
+<form asp-controller="Home" asp-action="Login">
+    @*form submit edildiğinde HomeController içerisinde Login metoduna gönderilecek*@
     <div class="mb-3">
         <label for="KullaniciAdi" class="form-label">Kullanıcı Adı</label>
-        <input type="text" class="form-control" id="Kullanici_Adi" name="KullaniciAdi">
+        <input type="text" class="form-control" id="Kullanici_Adi" name="KULLANICIADI">
     </div>
     <div class="mb-3">
         <label for="sifre" class="form-label">Şifre</label>
-        <input type="password" class="form-control" id="sifre" name="Sifre">
+        <input type="password" class="form-control" id="sifre" name="SIFRE">
+    </div>
+    <div class="col-sm-12">
+        <div class="radio">
+            <label>
+                <input type="radio" name="ROL" value="1">
+                Admin
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="ROL" value="0">
+                Kullanıcı
+            </label>
+        </div>
     </div>
     <button type="submit" class="btn btn-primary" onclick="deneme()">Giriş</button>
 </form>
