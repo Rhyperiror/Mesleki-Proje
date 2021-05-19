@@ -11,6 +11,10 @@
         <input type="text" class="form-control" id="KullaniciAdi" name="KULLANICIADI">
     </div>
     <div class="mb-3">
+        <label for="KullaniciSoyadi" class="form-label">Kullanıcı Soyadı</label>
+        <input type="text" class="form-control" id="KullaniciSoyadi" name="KULLANICISOYADI">
+    </div>
+    <div class="mb-3">
         <label for="sifre" class="form-label">Şifre</label>
         <input type="password" class="form-control" id="sifre" name="SIFRE">
     </div>
@@ -19,10 +23,33 @@
         <input type="email" class="form-control" id="email" name="EPOSTA">
     </div>
     @*<div class="mb-3 dropdown">
-        <label for="rol" class="form-label">Rol</label>
-        <select asp-for="@Model.Rol" asp-items="@Model.Roller">
-            <option>Rol Seçiniz</option>
-        </select>
-    </div>*@
+            <label for="rol" class="form-label">Rol</label>
+            <select asp-for="@Model.Rol" asp-items="@Model.Roller">
+                <option>Rol Seçiniz</option>
+            </select>
+        </div>*@
+    <div class="col-sm-12">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+            Option one is this and that — be sure to include why it's great
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="">
+            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+            Option two is checked by default
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="" disabled>
+            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+            Option three is disabled
+          </label>
+        </div>
+    </div>
     <button type="submit" class="btn btn-primary">Giriş</button>
 </form>
